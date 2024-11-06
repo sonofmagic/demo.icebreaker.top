@@ -3,6 +3,10 @@ layout: doc
 ---
 
 <script setup lang="ts">
+import { defineClientComponent } from 'vitepress'
+const ShikiCode = defineClientComponent(() => {
+  return import('./components/ShikiCode.vue')
+})
 import axios from 'axios'
 import { ref } from 'vue'
 
@@ -52,17 +56,9 @@ async function allSettled(){
 
 <button @click="all">emit</button>
 
-```jsonc-vue
-{{JSON.stringify(allRes,null,2)}}
-```
+<ShikiCode :code="JSON.stringify(allRes,null,2)" lang="json"></ShikiCode>
 
-<!-- ::: details 代码块 -->
-
-```ts-vue
-{{all.toString()}}
-```
-
-<!-- ::: -->
+<ShikiCode :code="all.toString()"></ShikiCode>
 
 ## [Promise.allSettled()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 
@@ -70,14 +66,30 @@ Promise.allSettled() 静态方法将一个 Promise 可迭代对象作为输入�
 
 <button @click="allSettled">emit</button>
 
-```jsonc-vue
+<ShikiCode :code="JSON.stringify(allSettledRes,null,2)" lang="json"></ShikiCode>
+
+<ShikiCode :code="allSettled.toString()"></ShikiCode>
+
+<!-- ```jsonc-vue
 {{JSON.stringify(allSettledRes,null,2)}}
-```
+``` -->
+
+<!-- ::: details 代码块 -->
+<!--
+```ts-vue
+{{allSettled.toString()}}
+``` -->
+
+<!-- ::: -->
+
+<!-- ```jsonc-vue
+{{JSON.stringify(allRes,null,2)}}
+``` -->
 
 <!-- ::: details 代码块 -->
 
-```ts-vue
-{{allSettled.toString()}}
-```
+<!-- ```ts-vue
+{{all.toString()}}
+``` -->
 
 <!-- ::: -->

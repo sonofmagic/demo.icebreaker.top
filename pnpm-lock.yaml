@@ -149,6 +149,9 @@ importers:
       axios:
         specifier: ^1.7.7
         version: 1.7.7
+      vue:
+        specifier: ^3.5.12
+        version: 3.5.12(typescript@5.6.3)
     devDependencies:
       '@types/body-parser':
         specifier: ^1.19.5
@@ -159,6 +162,9 @@ importers:
       body-parser:
         specifier: ^1.20.3
         version: 1.20.3
+      shiki:
+        specifier: ^1.22.2
+        version: 1.22.2
       vitepress:
         specifier: ^1.5.0
         version: 1.5.0(@algolia/client-search@5.12.0)(@types/node@22.9.0)(axios@1.7.7)(postcss@8.4.47)(search-insights@2.17.2)(typescript@5.6.3)

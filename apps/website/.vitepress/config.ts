@@ -14,6 +14,9 @@ export default defineConfig({
   outDir: '../../dist',
   title: 'icebreaker\'s demo website',
   description: 'icebreaker\'s demo website',
+  // markdown:{
+  //   shikiSetup
+  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
